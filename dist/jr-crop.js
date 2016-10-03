@@ -238,6 +238,8 @@ function($ionicModal, $rootScope, $q) {
       var sourceX = (this.posX - correctX) / this.scale;
       var sourceY = (this.posY - correctY) / this.scale;
 
+      context.fillStyle = '#fff';
+      context.fillRect(0, 0, canvas.width, canvas.height);
       context.drawImage(this.imgFull, sourceX, sourceY);
 
       this.options.modal.remove();
